@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverse-proxy:
+    build:
+      context: reverse-proxy
+    image: ganeshkasi/reverse-proxy
+  backend-user:
+    build:
+      context: ../backend-user
+    image: ganeshkasi/backend-user
+  backend-feed:
+    build:
+      context: ../backend-feed
+    image: ganeshkasi/backend-feed
+  frontend:
+    build:
+      context: ../frontend
+    image: ganeshkasi/frontend
